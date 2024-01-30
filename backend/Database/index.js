@@ -6,7 +6,7 @@ const connection = mysql.createConnection({
     host: 'localhost',
     user: 'root', 
     password: 'root',
-    database: '' 
+    database: 'sicca' 
   });
 console.log("database is connected 👽");
 
