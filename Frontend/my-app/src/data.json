@@ -1,0 +1,44 @@
+[
+    {
+        "name": "Orthopedic Dog Bed",
+        "price": "199.99",
+        "description": "An orthopedic dog bed designed for comfort and support, ideal for older dogs with joint pain.",
+        "categories": "dogs",
+        "imageUrl": "https://imgs.search.brave.com/UR4brQdc5epZFjh43KIG-SiriXh2c_BwWAOwNXhi0nk/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS40cmdvcy5pdC9z/L0FyZ29zLzkxMTQ5/NDJfUl9TRVQ_dz0y/NzAmaD0yNzAmcWx0/PTc1JmZtdC5qcGVn/LmludGVybGFjZWQ9/dHJ1ZQ.jpeg"
+    },
+    {
+        "name": "Sisal Cat Scratching Post",
+        "price": "79.99",
+        "description": "A durable sisal scratching post that satisfies your cat's natural scratching instincts and protects your furniture.",
+        "categories": "cats",
+        "imageUrl": "https://imgs.search.brave.com/f6ZrABDsZYWd3gpo4ZRnhisTAszc_-UW2n5-o_KlRWE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjE4czVYc09yVEwu/anBn"
+    },
+    {
+        "name": "LED Aquarium Kit",
+        "price": "149.99",
+        "description": "A complete LED aquarium kit with filter and lighting, perfect for tropical fish enthusiasts.",
+        "categories": "fish",
+        "imageUrl": "https://imgs.search.brave.com/KTQhELoyq3o5Ci3_I9KJxHdzjN_SrcdSJ1Ra1kC8Y7E/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMtbmEuc3NsLWlt/YWdlcy1hbWF6b24u/Y29tL2ltYWdlcy9J/LzkxTDhVSHUwbXBM/LmpwZw"
+    },
+    {
+        "name": "Parrot Cage with Play Top",
+        "price": "299.99",
+        "description": "A spacious parrot cage with a play top design, providing a fun and secure environment for your pet bird.",
+        "categories": "birds",
+        "imageUrl": "https://imgs.search.brave.com/3UfKK9baRo14--kFZi7KbszDevWWsMtmWAZYO6O55N8/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9hc3Nl/dHMucGV0Y28uY29t/L3BldGNvL2ltYWdl/L3VwbG9hZC9mX2F1/dG8scV9hdXRvLHRf/UHJvZHVjdERldGFp/bC1sYXJnZS8xMzIw/MTY1LWNlbnRlci0x"
+    },
+    {
+        "name": "Ergonomic Dog Harness",
+        "price": "69.99",
+        "description": "An ergonomic dog harness that offers better control and comfort during walks, reducing strain on the dog's neck.",
+        "categories": "dogs",
+        "imageUrl": "https://imgs.search.brave.com/g5BjliG1ujTQUVGGt25a5prqxaGQ9IbsS2881FX5RIg/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NjFsMktnTGJkV0wu/anBn"
+    },
+    {
+        "name": "Interactive Cat Toy",
+        "price": "29.99",
+        "description": "An interactive cat toy that stimulates your cat's hunting instincts and provides hours of entertainment.",
+        "categories": "cats",
+        "imageUrl": "https://imgs.search.brave.com/oBxrM_71i6HQaVPH8-TFIMkBQYMCeuXRt5uHRp0QgBQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9oaXBz/LmhlYXJzdGFwcHMu/Y29tL3ZhZGVyLXBy/b2QuczMuYW1hem9u/YXdzLmNvbS8xNjI5/MzkyMDA3LTQxY1JB/SzUwNWJMLl9TTDUw/MF8uanBnP2Nyb3A9/MXh3OjF4aDtjZW50/ZXIsdG9wJnJlc2l6/ZT05ODA6Kg"
+    }
+]
