@@ -1,0 +1,63 @@
+.card-img-overlay-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  /* Updated CSS for Po component */
+  
+  .card-img-overlay-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .card-img-overlay-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .custom-overlay {
+    transition: background-color 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .custom-overlay:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .custom-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+  
+  .custom-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .card-wrapper {
+    flex: 1;
+    min-width: 18rem;
+    max-width: 18rem;
+    overflow: hidden; /* Prevents the card from growing in height on hover */
+  }
+  
+  
+  /* ContactForm.css */
+  
+  /* Overall container styling */
+  .contact-form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+  }
