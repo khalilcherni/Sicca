@@ -22,7 +22,6 @@ function Places() {
               <Card.Body>
                 <Card.Title>{e.name}</Card.Title>
                 <Card.Text>{e.description}</Card.Text>
-                <Card.location>{e.location}</Card.location>
               </Card.Body>
             </Card>
           </div>

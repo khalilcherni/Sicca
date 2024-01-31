@@ -7,7 +7,7 @@ function Historic() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/historic/getAll')
+    axios.get('http://localhost:3001/historic/getAll')
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
