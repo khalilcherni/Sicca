@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
  import axios from 'axios';
 import Card from 'react-bootstrap/Card'; 
 // import data from '../data.json'
-import './historic.css'
-function Historic() {
+import './tourism.css'
+function Tourism() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/historic/getAll')
+    axios.get('http://localhost:3001/tourism/getAll')
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -32,4 +32,4 @@ function Historic() {
   );
 }
 
-export default Historic;
+export default Tourism;
