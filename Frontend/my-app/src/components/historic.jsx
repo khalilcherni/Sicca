@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
  import axios from 'axios';
 import Card from 'react-bootstrap/Card'; 
 // import data from '../data.json'
-import './Culture.css'
-function Places() {
+import './historic.css'
+function Historic() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3001/cultural/getAll')
+    axios.get('http://localhost:3000/historic/getAll')
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -22,7 +22,7 @@ function Places() {
               <Card.Body>
                 <Card.Title>{e.name}</Card.Title>
                 <Card.Text>{e.description}</Card.Text>
-                <Card.location>{e.location}</Card.location>
+          
               </Card.Body>
             </Card>
           </div>
@@ -32,4 +32,4 @@ function Places() {
   );
 }
 
-export default Places;
+export default Historic;
