@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../index.css';
-import './book.css'
+import './book.css';
+
 const ContactForm = () => {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
@@ -9,6 +10,7 @@ const ContactForm = () => {
   const [depar, setDepar] = useState('');
   const [numberofpeople, setNumberofpeople] = useState('');
   const [message, setMessage] = useState('');
+  const [date, setDate] = useState('');
 
   const sendMail = () => {
     const params = {
@@ -18,6 +20,7 @@ const ContactForm = () => {
       depar,
       numberofpeople,
       message,
+      date,
     };
 
     const serviceID = 'service_7y7ld3g'; // Replace with your EmailJS service ID
@@ -33,6 +36,7 @@ const ContactForm = () => {
         setDepar('');
         setNumberofpeople('');
         setMessage('');
+        setDate('');
         document.getElementById('alert').classList.add('alert');
         console.log(res);
         alert('Your message sent successfully!!');
@@ -43,7 +47,7 @@ const ContactForm = () => {
   return (
     <div className="contact-form-container">
       <div id="alert" className="alert">
-        <h1>Contact Us</h1>
+        <h1>Book khnow</h1>
       </div>
 
       <label htmlFor="Fullname" className="form-label">
@@ -101,6 +105,17 @@ const ContactForm = () => {
         onChange={(e) => setNumberofpeople(e.target.value)}
       />
 
+      <label htmlFor="date" className="form-label">
+        Date:
+      </label>
+      <input
+        className="form-input"
+        type="date"
+        id="date"
+        value={date}
+        onChange={(e) => setDate(e.target.value)}
+      />
+
       <label htmlFor="message" className="form-label">
         Message:
       </label>
@@ -112,7 +127,7 @@ const ContactForm = () => {
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
 
-      <button className="button-55" onClick={sendMail}>
+      <button className="button-89" onClick={sendMail}>
         Send Message
       </button>
     </div>
