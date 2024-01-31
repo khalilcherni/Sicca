@@ -7,7 +7,7 @@ function Places() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:3000/cultural/getAll')
+    axios.get('http://localhost:3001/cultural/getAll')
       .then(res => setData(res.data))
       .catch(err => console.error(err));
   }, []);
@@ -22,7 +22,6 @@ function Places() {
               <Card.Body>
                 <Card.Title>{e.name}</Card.Title>
                 <Card.Text>{e.description}</Card.Text>
-                <Card.location>{e.location}</Card.location>
               </Card.Body>
             </Card>
           </div>
