@@ -1,16 +1,16 @@
 import React, { useState, useEffect } from 'react';
-// import axios from 'axios';
+ import axios from 'axios';
 import Card from 'react-bootstrap/Card'; 
-import data from '../data.json'
-import './places.css'
+// import data from '../data.json'
+import './Culture.css'
 function Places() {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   axios.get('http://localhost:3000/api/po/get')
-  //     .then(res => setData(res.data))
-  //     .catch(err => console.error(err));
-  // }, []);
+  useEffect(() => {
+    axios.get('http://localhost:3000/cultural/getAll')
+      .then(res => setData(res.data))
+      .catch(err => console.error(err));
+  }, []);
 
   return (
     <div>
