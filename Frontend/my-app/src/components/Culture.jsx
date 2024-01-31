@@ -18,10 +18,11 @@ function Places() {
         {data.map(e => (
           <div key={e.id} className="card-wrapper">
             <Card style={{ width: '18rem' }} className="custom-card">
-              <Card.Img variant="top" src={e.imageUrl} />
+              <Card.Img variant="top" src={e.image_url} />
               <Card.Body>
                 <Card.Title>{e.name}</Card.Title>
                 <Card.Text>{e.description}</Card.Text>
+                <Card.location>{e.location}</Card.location>
               </Card.Body>
             </Card>
           </div>
