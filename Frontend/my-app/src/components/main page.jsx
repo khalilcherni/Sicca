@@ -73,6 +73,7 @@ function MainPage() {
 
         <section className="featured-places-section">
           <h2>Featured Places</h2>
+          <hr />
           <div className="splide">
             <div className="splide__track">
               <ul className="splide__list">
@@ -101,7 +102,8 @@ function MainPage() {
         </div>
       </section>
 
-
+<hr />
+<hr />
       <section className="map-section">
   <h2>Map of El Kef Governorate</h2>
   <div className="map-container">

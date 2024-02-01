@@ -49,7 +49,8 @@ body {
 
 /* Featured places section styles */
 .featured-places-section {
-  margin-top: 50px;
+  margin-top: 80px;
+  color: #dddddd;
 }
 
 .featured-places {
@@ -59,10 +60,10 @@ body {
 }
 
 .featured-place {
-  width: 1000p;
+  width: 20; /* Adjusted width to evenly distribute cards with a smaller margin */
   height: 400px; /* Set a fixed height for consistency */
   margin-bottom: 20px;
-
+  margin-right: 10px; /* Add a smaller margin for space between cards */
   background-color: #dddddd;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -91,17 +92,24 @@ body {
   font-size: 1rem;
   color: #000000; /* Light gray text color */
 }
-
+h2 {
+  color: #000000;
+  font-size: 40px;
+}
 
 /* Explore category section styles */
+/* Categories section styles */
+/* Categories section styles */
 .categories-section {
   margin-top: 50px;
   text-align: center;
+  color: #ddd;
 }
 
 .category-links {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 .category-link {
@@ -110,14 +118,41 @@ body {
   font-size: 1.5rem;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(to right, #676869, #434445);
   border-radius: 25px;
   transition: background 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .category-link:hover {
-  background: linear-gradient(to right, #0056b3, #003366);
+  background: linear-gradient(to right, #5e6062, #75797c);
 }
+
+/* Map section styles */
+.map-section {
+  margin-top: 50px;
+  text-align: center;
+  color: #dddddd;
+}
+
+.map-container {
+  margin-top: 30px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 500px;
+  border: 0;
+  border-radius: 15px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.map-container iframe:hover {
+  transform: scale(1.02);
+}
+
+
 
 /* Testimonials section styles */
 .testimonials-section {
