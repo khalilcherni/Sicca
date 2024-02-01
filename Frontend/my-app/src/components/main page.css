@@ -1,13 +1,8 @@
-/* Reset default margin and padding for body and html */
-body, html {
-  margin: 0;
-  padding: 0;
-}
-
-/* Set a consistent font family and size */
 body {
   font-family: 'Arial', sans-serif;
-  font-size: 16px;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Container for the video background */
@@ -16,7 +11,9 @@ body {
   height: 100vh; /* Full viewport height */
 
 }
-
+p{
+  color: #000000;
+}
 /* Style the video to cover the entire page */
 #background-video {
   width: 100%;
@@ -63,7 +60,8 @@ body {
   width: 20; /* Adjusted width to evenly distribute cards with a smaller margin */
   height: 400px; /* Set a fixed height for consistency */
   margin-bottom: 20px;
-  margin-right: 10px; /* Add a smaller margin for space between cards */
+  margin-right: 20px;
+  margin-left: 20px; /* Add a smaller margin for space between cards */
   background-color: #dddddd;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
@@ -170,7 +168,7 @@ h2 {
   width: 30%;
   margin-bottom: 20px;
   padding: 20px;
-  background-color: #333;
+  background-color: #dddddd;
   border-radius: 15px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
@@ -182,7 +180,7 @@ h2 {
 
 .testimonial p {
   font-size: 1.5rem;
-  color: #fff;
+  color: #191919;
 }
 
 /* Advanced styling for testimonial author */
@@ -193,12 +191,12 @@ h2 {
 }
 
 /* Call-to-action section styles */
-.cta-section {
+/* .cta-section {
   margin-top: 50px;
   color: #fff;
   text-align: center;
   padding: 50px;
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(to right, #b7b7b8, #b2b4b6);
 }
 
 .cta-section h2 {
@@ -218,20 +216,45 @@ h2 {
   font-size: 1.5rem;
   text-decoration: none;
   color: #fff;
-  background: linear-gradient(to right, #007bff, #0056b3);
+  background: linear-gradient(to right, #c0c2c3, #cbcbcb);
   border-radius: 25px;
   transition: background 0.3s ease;
 }
 
 .cta-section .btn:hover {
-  background: linear-gradient(to right, #0056b3, #003366);
+  background: linear-gradient(to right, #caccce, #d3d3d3);
+} */
+.cta-section {
+  background-color: #dddddd;
+  color: #fff;
+  text-align: center;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+
+.btn-primary {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+  background-color: #dddddd;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #111010;
 }
 
 /* Footer section styles */
 .footer {
   margin-top: 50px;
   padding: 20px 0;
-  background-color: #333;
+  background-color: #6d6b6b;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -252,5 +275,8 @@ h2 {
 }
 
 .social-links a:hover {
-  color: #007bff;
+  color: #0b0b0b;
+}
+h3{
+  color: #000000;
 }

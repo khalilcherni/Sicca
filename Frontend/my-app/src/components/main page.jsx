@@ -119,9 +119,10 @@ function MainPage() {
 
   </div>
 </section>
-
+<hr />
       <section className="testimonials-section">
         <h2>What People are Saying</h2>
+        <hr />
         <div className="testimonials">
           {testimonials.map((testimonial, index) => (
             <div className="testimonial" key={index}>
@@ -146,9 +147,9 @@ function MainPage() {
         </div>
         <div className="social-links">
           <h3>Connect With Us</h3>
-          <a href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a className='22' href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer">Facebook</a>
+          <a className='22' href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer">Twitter</a>
+          <a className='22' href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
       </footer>
     </div>
