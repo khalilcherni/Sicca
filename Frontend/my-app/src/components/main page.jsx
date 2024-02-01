@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 // import SearchBar from './SearchBar'; // Commented out the import statement for SearchBar
 import './main page.css'; 
+import video from "../video/El Kef Tunisia تونس الكاف (1).mp4"
 
 function MainPage() {
   const [testimonials] = useState([
@@ -21,12 +22,16 @@ function MainPage() {
 
   return (
     
-    
     <div className="background-container">
+  <video id="background-video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
     <div className="main-page-container">
       <section className="welcome-section">
         <h1>Welcome to Discover SICCA!</h1>
         <p>Explore the best attractions, landmarks, and cultural sites in our city.</p>
+      
       </section>
 
       {/* <section className="search-section">
