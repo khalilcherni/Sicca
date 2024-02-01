@@ -142,14 +142,14 @@ function MainPage() {
       <footer className="footer">
         <div className="footer-info">
           <h3>Contact Us</h3>
-          <p>Email: info@discovermycity.com</p>
-          <p>Phone: +123 456 7890</p>
+          <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" alt="" />: info@discovermycity.com</p>
+          <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3059/3059561.png" alt="" srcset="" />: +123 456 7890</p>
         </div>
         <div className="social-links">
           <h3>Connect With Us</h3>
-          <a className='22' href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer">Facebook</a>
-          <a className='22' href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer">Twitter</a>
-          <a className='22' href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a className='22' href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer" > <img className='tt' src="https://cdn-icons-png.flaticon.com/128/20/20673.png" alt="" /></a>
+          <a className='22' href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="" /></a>
+          <a className='22' href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3670/3670274.png" alt="" /></a>
         </div>
       </footer>
     </div>

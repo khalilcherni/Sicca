@@ -91,7 +91,7 @@ p{
   color: #000000; /* Light gray text color */
 }
 h2 {
-  color: #000000;
+  color: #fff5f5;
   font-size: 40px;
 }
 
@@ -254,7 +254,7 @@ h2 {
 .footer {
   margin-top: 50px;
   padding: 20px 0;
-  background-color: #6d6b6b;
+  background-color: #9f9c9c;
   color: #fff;
   display: flex;
   justify-content: space-between;
@@ -270,7 +270,7 @@ h2 {
   margin-top: 10px;
   font-size: 1.2rem;
   text-decoration: none;
-  color: #fff;
+  color: #080808;
   transition: color 0.3s ease;
 }
 
@@ -279,4 +279,8 @@ h2 {
 }
 h3{
   color: #000000;
+}
+.tt{
+  height: 30px;
+  width: 30px;
 }
