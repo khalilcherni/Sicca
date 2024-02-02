@@ -4,18 +4,20 @@ import ContactForm from './components/Book';
 
 import Historic from './components/historic';
 import Tourism from './components/tourism';
+import Add from './components/Add';
 
 function App() {
   return (
     <div className="App">
-      <MainPage /> 
+      {/* <MainPage />  */}
       <hr />
       
      
       <hr />
-      <Historic />
+      {/* <Historic /> */}
       <hr />
-      <Tourism />
+      {/* <Add/> */}
+      <Tourism /> 
     </div>
   );
 }
