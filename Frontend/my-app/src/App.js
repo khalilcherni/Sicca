@@ -9,15 +9,15 @@ import Add from './components/Add';
 function App() {
   return (
     <div className="App">
-      <MainPage /> 
+      {/* <MainPage />  */}
       <hr />
       
      
       <hr />
-      <Historic />
+      {/* <Historic /> */}
       <hr />
-      {/* <Add/>
-      <Tourism /> */}
+      {/* <Add/> */}
+      <Tourism /> 
     </div>
   );
 }

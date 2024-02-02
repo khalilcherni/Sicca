@@ -1,63 +1,108 @@
+/* Updated CSS for card component */
+
 .card-img-overlay-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-img-overlay-hover:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.custom-overlay {
+  transition: background-color 0.3s ease;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.custom-overlay:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.custom-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.custom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card-wrapper {
+  flex: 1;
+  min-width: 18rem;
+  max-width: 18rem;
+  overflow: hidden; /* Prevents the card from growing in height on hover */
+}
+
+/* Updated CSS for ContactForm component */
+
+/* Overall container styling */
+.contact-form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  transform-origin: center bottom;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.contact-form-container label,
+.contact-form-container input,
+.contact-form-container textarea,
+.contact-form-container button {
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.contact-form-container input,
+.contact-form-container textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.contact-form-container input:focus,
+.contact-form-container textarea:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.contact-form-container button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.contact-form-container button:hover {
+  background-color: #2980b9;
+}
+
+/* Add some animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
   }
-  
-  /* Updated CSS for Po component */
-  
-  .card-img-overlay-hover {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .card-img-overlay-hover:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .custom-overlay {
-    transition: background-color 0.3s ease;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .custom-overlay:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-  }
-  
-  .custom-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .custom-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-  }
-  
-  .card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  .card-wrapper {
-    flex: 1;
-    min-width: 18rem;
-    max-width: 18rem;
-    overflow: hidden; /* Prevents the card from growing in height on hover */
-  }
-  
-  
-  /* ContactForm.css */
-  
-  /* Overall container styling */
-  .contact-form-container {
-    max-width: 400px;
-    margin: 50px auto;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-  }
+}
