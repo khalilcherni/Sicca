@@ -1,9 +1,9 @@
-// MainPage.jsx
-import React, { useState, useEffect } from 'react';
+import React, { useState,useEffect } from 'react';
+// import SearchBar from './SearchBar'; // Commented out the import statement for SearchBar
 import Splide from '@splidejs/splide';
 import '@splidejs/splide/dist/css/themes/splide-default.min.css';
-import './main page.css';
-import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
+import './main page.css'; 
+import video from "../video/El Kef Tunisia تونس الكاف (1).mp4"
 
 function MainPage() {
   const [testimonials] = useState([
@@ -91,71 +91,69 @@ function MainPage() {
           </div>
         </section>
 
-        <section className="categories-section">
-          <h2>Explore by Category</h2>
-          <div className="category-links">
-            <a href="/tourism" className="button-80">Tourism</a>
-            <a href="/cultural" className="button-80">Cultural</a>
-            <a href="/historic" className="button-80">Historic</a>
-          </div>
-        </section>
 
+
+      <section className="categories-section">
+        <h2>Explore by Category</h2>
+        <div className="category-links">
+          <a href="/tourism" className="button-80">Tourism</a>
+          <a href="/cultural"className="button-80">Cultural</a>
+          <a href="/historic"className="button-80">Historic</a>
+        </div>
+      </section>
+
+<hr />
+<hr />
+      <section className="map-section">
+  <h2>Map of El Kef Governorate</h2>
+  <div className="map-container">
+  <iframe
+  title="Map of El Kef Governorate"
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102156.61610166756!2d8.498572811839378!3d36.17076587811491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f4c26324f72b0f%3A0xf2e67e2d2c4eeab7!2sEl%20Kef%20Governorate!5e0!3m2!1sen!2stn!4v1643560882387!5m2!1sen!2stn"
+  width="600"
+  height="450"
+  style={{ border: 0 }}
+  allowFullScreen=""
+  loading="lazy"
+></iframe>
+
+  </div>
+</section>
+<hr />
+      <section className="testimonials-section">
+        <h2>What People are Saying</h2>
         <hr />
-        <hr />
+        <div className="testimonials">
+          {testimonials.map((testimonial, index) => (
+            <div className="testimonial" key={index}>
+              <p>"{testimonial.text}"</p>
+              <p>- {testimonial.author}</p>
+            </div>
+          ))}
+        </div>
+      </section>
 
-        <section className="map-section">
-          <h2>Map of El Kef Governorate</h2>
-          <div className="map-container">
-            <iframe
-              title="Map of El Kef Governorate"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d102156.61610166756!2d8.498572811839378!3d36.17076587811491!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12f4c26324f72b0f%3A0xf2e67e2d2c4eeab7!2sEl%20Kef%20Governorate!5e0!3m2!1sen!2stn!4v1643560882387!5m2!1sen!2stn"
-              width="600"
-              height="450"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-            ></iframe>
-          </div>
-        </section>
+      <section className="cta-section">
+        <h2 className='b'>Ready to Discover?</h2>
+        <p>Start exploring now or sign up for updates!</p>
+        <a href="/explore" className="button-80">Explore Now</a>
+      </section>
 
-        <hr />
-
-        <section className="testimonials-section">
-          <h2>What People are Saying</h2>
-          <hr />
-          <div className="testimonials">
-            {testimonials.map((testimonial, index) => (
-              <div className="testimonial" key={index}>
-                <p>"{testimonial.text}"</p>
-                <p>- {testimonial.author}</p>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        <section className="cta-section">
-          <h2 className='b'>Ready to Discover?</h2>
-          <p>Start exploring now or sign up for updates!</p>
-          <a href="/explore" className="button-80">Explore Now</a>
-          <a href="/login" className="button-80">Login</a>
-          <a href="/signup" className="button-80">Sign Up</a>
-        </section>
-
-        <footer className="footer">
-          <div className="footer-info">
-            <h3>Contact Us</h3>
-            <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" alt="" />: info@discovermycity.com</p>
-            <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3059/3059561.png" alt="" srcset="" />: +123 456 7890</p>
-          </div>
-          <div className="social-links">
-            <h3>Connect With Us</h3>
-            <a className='22' href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer" > <img className='tt' src="https://cdn-icons-png.flaticon.com/128/20/20673.png" alt="" /></a>
-            <a className='22' href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="" /></a>
-            <a className='22' href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3670/3670274.png" alt="" /></a>
-          </div>
-        </footer>
-      </div>
+      <footer className="footer">
+        <div className="footer-info">
+          <h3>Contact Us</h3>
+          <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3178/3178158.png" alt="" />: info@discovermycity.com</p>
+          <p><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3059/3059561.png" alt="" srcset="" />: +123 456 7890</p>
+        </div>
+        <div className="social-links">
+          <h3>Connect With Us</h3>
+          <a className='22' href="https://www.facebook.com/discovermycity" target="_blank" rel="noopener noreferrer" > <img className='tt' src="https://cdn-icons-png.flaticon.com/128/20/20673.png" alt="" /></a>
+          <a className='22' href="https://twitter.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/5969/5969020.png" alt="" /></a>
+          <a className='22' href="https://www.instagram.com/discovermycity" target="_blank" rel="noopener noreferrer"><img className='tt' src="https://cdn-icons-png.flaticon.com/128/3670/3670274.png" alt="" /></a>
+        </div>
+      </footer>
     </div>
+  </div>
   );
 }
 
