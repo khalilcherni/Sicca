@@ -42,7 +42,7 @@ setactivities("")
 
   return (
     <div className="container mt-5">
-      <h2 className="mb-4">Add New Product</h2>
+      <h2 className="mb-4">Add New Place</h2>
       <form>
         <div className="mb-3">
           <label className="form-label">name:</label>
@@ -77,9 +77,9 @@ setactivities("")
         </div>
 
         <div className="mb-3">
-          <label className="form-label">Date:</label>
+          <label className="form-label">contact_info:</label>
           <input
-            type="date"
+           placeholder='contact_info'
             className="form-control"
             value={contact_info}
             onChange={(e) => setcontact_info(e.target.value)}
@@ -89,7 +89,7 @@ setactivities("")
         <div className="mb-3">
           <label className="form-label">location:</label>
           <input
-            type="location"
+          placeholder='location'
             className="form-control"
             value={location}
             onChange={(e) => setlocation(e.target.value)}
@@ -99,7 +99,7 @@ setactivities("")
         <div className="mb-3">
           <label className="form-label">tourism_category:</label>
           <input
-            type="location"
+          placeholder='tourism_category'
             className="form-control"
             value={tourism_category}
             onChange={(e) => settourism_category(e.target.value)}
@@ -108,7 +108,7 @@ setactivities("")
         <div className="mb-3">
           <label className="form-label">activities:</label>
           <input
-            type="location"
+         placeholder='activities'
             className="form-control"
             value={activities}
             onChange={(e) => setactivities(e.target.value)}
