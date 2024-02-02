@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-
+import './Add.css'
 function Add() {
   const [name, setname] = useState('');
   const [contact_info, setcontact_info] = useState('');

@@ -1,0 +1,93 @@
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    overflow: hidden;
+    transform-origin: center bottom;
+    animation: fadeInUp 0.8s ease-out, bounce 1.5s ease-out 0.8s;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-label {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-control {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    outline: none;
+    border-color: #3498db; /* Blue color or your preferred focus color */
+  }
+  
+  .button-55 {
+    background-color: #3498db; /* Blue color or your preferred button color */
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button-55:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+  }
+  
+  /* Add some animations */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-20px);
+    }
+    60% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  .container,
+  .form-control,
+  .button-55 {
+    animation-fill-mode: both;
+  }
+  
+  /* Custom scrollbar */
+  /* You can adjust the scrollbar styles based on your preferences */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #3498db;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+  }
+  
