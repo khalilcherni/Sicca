@@ -7,7 +7,7 @@ import sunnyImage from '../images/sunny.avif';
 import rainyImage from '../images/rainy.avif';
 import cloudyImage from '../images/cloudy.avif';
 import unknownImage from '../images/unknownImage.avif';
-
+import './weather.css'
 const weatherImages = {
   clear: sunnyImage,
   rain: rainyImage,
