@@ -27,9 +27,9 @@ module.exports = {
   },
 
   updateCultural: function(req, res) {
-    const culturalName = req.params.name; // Change from id to name
+    const culturalId = req.params.place_id; // Change from name to place_id
     const updateCultural = req.body;
-    cultural.update(culturalName, updateCultural, function(err, results) {
+    cultural.update(culturalId, updateCultural, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
@@ -42,8 +42,8 @@ module.exports = {
   },
 
   deleteCultural: function(req, res) {
-    const culturalName = req.params.name; // Change from id to name
-    cultural.delete(culturalName, function(err, results) {
+    const culturalId = req.params.place_id; // Change from name to place_id
+    cultural.delete(culturalId, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
