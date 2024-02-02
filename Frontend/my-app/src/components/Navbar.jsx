@@ -4,6 +4,8 @@ import MainPage from './main page';
 import Tourism from './tourism';
 import Places from './Culture';
 import Historic from './historic';
+import ContactForm from './Book';
+import Add from './Add';
  // Replace with your actual logo path
 
 function BasicExample() {
@@ -53,8 +55,8 @@ function BasicExample() {
           
 
               <NavDropdown title="Details" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('contact')}>
-                  Contact us
+                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('ContactForm')}>
+                  ContactForm 
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#Add" onClick={() => handleTabClick('Add')}>
                   Add
@@ -86,6 +88,8 @@ function BasicExample() {
       {activeTab === 'tourism' && < Tourism/>}
       {activeTab === 'culture' && < Places/>}
       {activeTab === 'historic' && < Historic/>}
+      {activeTab === 'ContactForm' && < ContactForm/>}
+      {activeTab === 'Add' && < Add/>}
     </div>
   );
 }
