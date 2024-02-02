@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import MainPage from './main page';
-import Tourism from './tourism';
-import Places from './Culture';
-import Historic from './historic';
-import ContactForm from './Book';
-import Add from './Add';
- // Replace with your actual logo path
+import WeatherInfo from './weather';
+
+
+// Replace with your actual logo path
 
 function BasicExample() {
   const [activeTab, setActiveTab] = useState('home');
@@ -32,7 +30,7 @@ function BasicExample() {
         <Container>
           <Navbar.Brand href="#home">
             <img src="" alt="" height="30" />
-            Sicca Veneria
+            Tunisian Press
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -43,20 +41,25 @@ function BasicExample() {
               <Nav.Link href="#weather" onClick={() => handleTabClick('Weather')}>
                 Weather
               </Nav.Link>
-              <Nav.Link href="#tourism" onClick={() => handleTabClick('tourism')}>
-                tourism
+              <Nav.Link href="#sports" onClick={() => handleTabClick('sports')}>
+                Sports
               </Nav.Link>
-              <Nav.Link href="#link" onClick={() => handleTabClick('culture')}>
-                culture
+              <Nav.Link href="#link" onClick={() => handleTabClick('politics')}>
+                Politics
               </Nav.Link>
-              <Nav.Link href="#music" onClick={() => handleTabClick('historic')}>
-                historic
+              <Nav.Link href="#music" onClick={() => handleTabClick('music')}>
+                Music
               </Nav.Link>
-          
+              <Nav.Link href="#radio" onClick={() => handleTabClick('radio')}>
+                Radio
+              </Nav.Link>
+              <Nav.Link href="#tv" onClick={() => handleTabClick('tv')}>
+                TV
+              </Nav.Link>
 
               <NavDropdown title="Details" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('ContactForm')}>
-                  ContactForm 
+                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('contact')}>
+                  Contact us
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#Add" onClick={() => handleTabClick('Add')}>
                   Add
@@ -85,11 +88,8 @@ function BasicExample() {
       <hr />
 
       {activeTab === 'home' && <MainPage />}
-      {activeTab === 'tourism' && < Tourism/>}
-      {activeTab === 'culture' && < Places/>}
-      {activeTab === 'historic' && < Historic/>}
-      {activeTab === 'ContactForm' && < ContactForm/>}
-      {activeTab === 'Add' && < Add/>}
+      {activeTab === 'Weather' && <WeatherInfo />}
+    
     </div>
   );
 }
