@@ -96,9 +96,9 @@ function MainPage() {
       <section className="categories-section">
         <h2>Explore by Category</h2>
         <div className="category-links">
-          <a href="/tourism" className="category-link">Tourism</a>
-          <a href="/cultural" className="category-link">Cultural</a>
-          <a href="/historic" className="category-link">Historic</a>
+          <a href="/tourism" className="button-80">Tourism</a>
+          <a href="/cultural"className="button-80">Cultural</a>
+          <a href="/historic"className="button-80">Historic</a>
         </div>
       </section>
 
@@ -134,9 +134,9 @@ function MainPage() {
       </section>
 
       <section className="cta-section">
-        <h2>Ready to Discover?</h2>
+        <h2 className='b'>Ready to Discover?</h2>
         <p>Start exploring now or sign up for updates!</p>
-        <a href="/explore" className="btn btn-primary">Explore Now</a>
+        <a href="/explore" className="button-80">Explore Now</a>
       </section>
 
       <footer className="footer">

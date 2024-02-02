@@ -1,23 +1,23 @@
 import './App.css';
-// import MainPage from './components/main page'; 
-// import ContactForm from './components/Book';
+import MainPage from './components/main page'; 
+import ContactForm from './components/Book';
 
-// import Historic from './components/historic';
+import Historic from './components/historic';
 import Tourism from './components/tourism';
 import Add from './components/Add';
 
 function App() {
   return (
     <div className="App">
-      {/* <MainPage /> 
+      <MainPage /> 
       <hr />
       
      
       <hr />
       <Historic />
-      <hr /> */}
-      <Add/>
-      <Tourism />
+      <hr />
+      {/* <Add/>
+      <Tourism /> */}
     </div>
   );
 }
