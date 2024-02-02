@@ -72,7 +72,7 @@ setactivities("")
             className="form-control"
             placeholder="Description"
             value={description}
-            onChange={(e) => setDescription(e.target.value)}
+            onChange={(e) => setdescription(e.target.value)}
           />
         </div>
 
