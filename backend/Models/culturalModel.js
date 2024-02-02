@@ -15,7 +15,7 @@ module.exports = {
     });
   },
 
-  update: function(PlaceName, updateCultural, callback) {
+  update: function(culturalId, updateCultural, callback) {
     const {
       description,
       contact_info,
@@ -25,11 +25,11 @@ module.exports = {
     } = updateCultural;
 
     const sql =
-      "UPDATE `cultural_places` SET description=?, contact_info=?, image_url=?, location=?, cultural_category=? WHERE name=?";
+      "UPDATE `cultural_places` SET description=?, contact_info=?, image_url=?, location=?, cultural_category=? WHERE place_id=?";
     
     connection.query(
       sql,
-      [description, contact_info, image_url, location, cultural_category, PlaceName],
+      [description, contact_info, image_url, location, cultural_category, culturalId],
       function(error, results) {
         callback(error, results);
       }
@@ -43,9 +43,9 @@ module.exports = {
     });
   },
 
-  delete: function(PlaceName, callback) {
-    const sql = "DELETE FROM `cultural_places` WHERE name=?";
-    connection.query(sql, [PlaceName], function(error, results) {
+  delete: function(culturalId, callback) {
+    const sql = "DELETE FROM `cultural_places` WHERE place_id=?";
+    connection.query(sql, [culturalId], function(error, results) {
       callback(error, results);
     });
   },

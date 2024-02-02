@@ -4,7 +4,7 @@
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
+    background-color: #c1afaf;
     overflow: hidden;
     transform-origin: center bottom;
     animation: fadeInUp 0.8s ease-out, bounce 1.5s ease-out 0.8s;
@@ -65,7 +65,7 @@
   
   .button-89:active {
     background: var(--color);
-    color: #fff;
+    color: #ffffff;
   }
   .button-55:hover {
     background-color: #2980b9; /* Darker blue color on hover */
@@ -112,6 +112,6 @@
   }
   
   ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
+    background-color: #ffffff;
   }
   
