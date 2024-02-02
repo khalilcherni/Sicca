@@ -8,13 +8,13 @@ import Tourism from './components/tourism';
 function App() {
   return (
     <div className="App">
-      <MainPage /> 
+      {/* <MainPage /> 
       <hr />
       
      
       <hr />
       <Historic />
-      <hr />
+      <hr /> */}
       <Tourism />
     </div>
   );
