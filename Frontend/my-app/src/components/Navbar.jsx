@@ -3,6 +3,7 @@ import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from '
 import MainPage from './main page';
 import Tourism from './tourism';
 import Places from './Culture';
+import Historic from './historic';
  // Replace with your actual logo path
 
 function BasicExample() {
@@ -46,15 +47,10 @@ function BasicExample() {
               <Nav.Link href="#link" onClick={() => handleTabClick('culture')}>
                 culture
               </Nav.Link>
-              <Nav.Link href="#music" onClick={() => handleTabClick('music')}>
-                Music
+              <Nav.Link href="#music" onClick={() => handleTabClick('historic')}>
+                historic
               </Nav.Link>
-              <Nav.Link href="#radio" onClick={() => handleTabClick('radio')}>
-                Radio
-              </Nav.Link>
-              <Nav.Link href="#tv" onClick={() => handleTabClick('tv')}>
-                TV
-              </Nav.Link>
+          
 
               <NavDropdown title="Details" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('contact')}>
@@ -89,6 +85,7 @@ function BasicExample() {
       {activeTab === 'home' && <MainPage />}
       {activeTab === 'tourism' && < Tourism/>}
       {activeTab === 'culture' && < Places/>}
+      {activeTab === 'historic' && < Historic/>}
     </div>
   );
 }
