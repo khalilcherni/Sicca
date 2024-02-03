@@ -1,13 +1,12 @@
-const express=require("express")
-const router=express.Router()
-const tourismController = require("../Controllers/tourismController")
+// tourismRoutes.js
+const express = require("express");
+const router = express.Router();
+const tourismController = require("../Controllers/tourismController");
 
+router.get("/getAll", tourismController.getAllTourism);
+router.get("/:place_id", tourismController.getOneTourism);
+router.post("/add", tourismController.addTourism);
+router.put("/update/:place_id", tourismController.updateTourism);
+router.delete("/delete/:place_id", tourismController.deleteTourism);
 
-router.get("/getAll",tourismController.getAllTourism)
-router.get("/:name",tourismController.getOneTourism)
-router.post("/add",tourismController.addTourism)
-router.put("/update/:name",tourismController.updateTourism)
-router.delete("/delete/:name",tourismController.deleteTourism)
-
-
-module.exports=router
+module.exports = router;

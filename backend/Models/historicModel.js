@@ -16,7 +16,7 @@ module.exports = {
     });
   },
 
-  update: function(historicName, updateHistoric, callback) {
+  update: function(historicId, updateHistoric, callback) {
     const {
       description,
       contact_info,
@@ -41,7 +41,7 @@ module.exports = {
         architectural_style=?,
         entry_fee=?,
         opening_hours=?
-      WHERE name=?
+      WHERE place_id=?
     `;
     
     connection.query(
@@ -56,7 +56,7 @@ module.exports = {
         architectural_style,
         entry_fee,
         opening_hours,
-        historicName,
+        historicId,
       ],
       function(error, results) {
         callback(error, results);
@@ -71,9 +71,9 @@ module.exports = {
     });
   },
 
-  delete: function(historicName, callback) {
-    const sql = "DELETE FROM `historic_places` WHERE name=?";
-    connection.query(sql, [historicName], function(error, results) {
+  delete: function(historicId, callback) {
+    const sql = "DELETE FROM `historic_places` WHERE place_id=?";
+    connection.query(sql, [historicId], function(error, results) {
       callback(error, results);
     });
   },

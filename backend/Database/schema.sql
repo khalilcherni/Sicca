@@ -31,8 +31,10 @@ CREATE TABLE IF NOT EXISTS `sicca`.`cultural_places` (
   `exhibits` TEXT NULL DEFAULT NULL,
   `entry_fee` DECIMAL(10,2) NULL DEFAULT NULL,
   `opening_hours` VARCHAR(255) NULL DEFAULT NULL,
+  `rating` VARCHAR(15) NOT NULL DEFAULT 'N/A',
   PRIMARY KEY (`place_id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 21
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -52,8 +54,10 @@ CREATE TABLE IF NOT EXISTS `sicca`.`historic_places` (
   `architectural_style` VARCHAR(255) NULL DEFAULT NULL,
   `entry_fee` DECIMAL(10,2) NULL DEFAULT NULL,
   `opening_hours` VARCHAR(255) NULL DEFAULT NULL,
+  `rating` VARCHAR(15) NOT NULL DEFAULT 'N/A',
   PRIMARY KEY (`place_id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 
@@ -72,8 +76,10 @@ CREATE TABLE IF NOT EXISTS `sicca`.`tourism_places` (
   `activities` TEXT NULL DEFAULT NULL,
   `entry_fee` DECIMAL(10,2) NULL DEFAULT NULL,
   `opening_hours` VARCHAR(255) NULL DEFAULT NULL,
+  `rating` VARCHAR(15) NOT NULL DEFAULT 'N/A',
   PRIMARY KEY (`place_id`))
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8mb4
 COLLATE = utf8mb4_0900_ai_ci;
 

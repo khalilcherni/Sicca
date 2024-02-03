@@ -2,7 +2,9 @@ import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import '../index.css';
 import './book.css';
+// import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
+
 const ContactForm = () => {
   const [fullname, setFullname] = useState('');
   const [email, setEmail] = useState('');
@@ -48,7 +50,7 @@ const ContactForm = () => {
     <div className="contact-form-container">
        <video id="background-video" autoPlay loop muted>
         <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
+        {/* Your browser does not support the video tag. */}
       </video>
       <div id="alert" className="alert">
         <h1>Book khnow</h1>

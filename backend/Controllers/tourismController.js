@@ -27,9 +27,9 @@ module.exports = {
   },
 
   updateTourism: function(req, res) {
-    const tourismName = req.params.name;
+    const tourismId = req.params.place_id; // Change from name to place_id
     const updateTourism = req.body;
-    tourism.update(tourismName, updateTourism, function(err, results) {
+    tourism.update(tourismId, updateTourism, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
@@ -42,8 +42,8 @@ module.exports = {
   },
 
   deleteTourism: function(req, res) {
-    const tourismName = req.params.name;
-    tourism.delete(tourismName, function(err, results) {
+    const tourismId = req.params.place_id; // Change from name to place_id
+    tourism.delete(tourismId, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
