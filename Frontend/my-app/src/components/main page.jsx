@@ -96,9 +96,9 @@ function MainPage() {
       <section className="categories-section">
         <h2>Explore by Category</h2>
         <div className="category-links">
-          <a href="/tourism" className="button-80">Tourism</a>
-          <a href="/cultural"className="button-80">Cultural</a>
-          <a href="/historic"className="button-80">Historic</a>
+          <a href="/tourism" className="cta">Tourism</a>
+          <a href="/cultural"className="cta">Cultural</a>
+          <a href="/historic"className="cta">Historic</a>
         </div>
       </section>
 
