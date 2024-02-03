@@ -37,7 +37,7 @@ function BasicExample() {
       <Navbar expand="lg" className="bg-body-tertiary">
         <Container>
           <Navbar.Brand href="#home">
-            <img src="" alt="" height="30" />
+            <img className='op' src="https://cdn-icons-png.flaticon.com/128/7006/7006898.png" alt="" height="30" />
             Sicca Veneria
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

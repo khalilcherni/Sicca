@@ -8,6 +8,7 @@ import rainyImage from '../images/rainy.avif';
 import cloudyImage from '../images/cloudy.avif';
 import unknownImage from '../images/unknownImage.avif';
 import './weather.css'
+import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 const weatherImages = {
   clear: sunnyImage,
   rain: rainyImage,
@@ -54,6 +55,7 @@ const WeatherInfo = () => {
   return (
     <div
       className='weather-container'
+      
       style={{
         backgroundImage: `url(${weatherInfo ? weatherInfo.conditionImage : ''})`,
         backgroundSize: 'cover',
@@ -63,6 +65,10 @@ const WeatherInfo = () => {
         borderRadius: '10px', // Optional: Add border-radius for a rounded appearance
       }}
     >
+         <video id="background-video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <input
         type='text'
         placeholder='Enter city name'
