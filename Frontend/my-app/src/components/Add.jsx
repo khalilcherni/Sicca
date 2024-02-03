@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Add.css'
-function Add() {
+import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
+function Add () {
   const [name, setname] = useState('');
   const [contact_info, setcontact_info] = useState('');
   const [description, setdescription] = useState('');
@@ -41,7 +42,12 @@ setactivities("")
   };
 
   return (
+    
     <div className="container mt-5">
+      <video id="background-video" autoPlay loop muted>
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <h2 className="mb-4">Add New Place</h2>
       <form>
         <div className="mb-3">
@@ -72,7 +78,7 @@ setactivities("")
             className="form-control"
             placeholder="Description"
             value={description}
-            onChange={(e) => setdescription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
           />
         </div>
 
