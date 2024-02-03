@@ -16,7 +16,7 @@ module.exports = {
     });
   },
 
-  update: function(tourismName, updateTourism, callback) {
+  update: function(tourismId, updateTourism, callback) {
     const {
       description,
       contact_info,
@@ -39,7 +39,7 @@ module.exports = {
         activities=?,
         entry_fee=?,
         opening_hours=?
-      WHERE name=?
+      WHERE place_id=?
     `;
     
     connection.query(
@@ -53,14 +53,13 @@ module.exports = {
         activities,
         entry_fee,
         opening_hours,
-        tourismName,
+        tourismId,
       ],
       function(error, results) {
         callback(error, results);
       }
     );
   },
-
   add: function(tourismData, callback) {
     const sql = "INSERT INTO `tourism_places` SET ?";
     connection.query(sql, tourismData, function(error, results) {
@@ -68,9 +67,9 @@ module.exports = {
     });
   },
 
-  delete: function(tourismName, callback) {
-    const sql = "DELETE FROM `tourism_places` WHERE name=?";
-    connection.query(sql, [tourismName], function(error, results) {
+  delete: function(tourismId, callback) {
+    const sql = "DELETE FROM `tourism_places` WHERE place_id=?";
+    connection.query(sql, [tourismId], function(error, results) {
       callback(error, results);
     });
   },

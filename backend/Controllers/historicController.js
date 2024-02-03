@@ -27,9 +27,9 @@ module.exports = {
   },
 
   updateHistoric: function(req, res) {
-    const historicName = req.params.name;
+    const historicId = req.params.place_id; // Change from name to place_id
     const updateHistoric = req.body;
-    historic.update(historicName, updateHistoric, function(err, results) {
+    historic.update(historicId, updateHistoric, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
@@ -42,8 +42,8 @@ module.exports = {
   },
 
   deleteHistoric: function(req, res) {
-    const historicName = req.params.name;
-    historic.delete(historicName, function(err, results) {
+    const historicId = req.params.place_id; // Change from name to place_id
+    historic.delete(historicId, function(err, results) {
       if (err) res.status(500).json({ error: 'Internal Server Error' });
       else {
         if (results.affectedRows > 0) {
