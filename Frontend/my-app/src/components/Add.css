@@ -1,32 +1,9 @@
-.container {
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    overflow: hidden;
-    transform-origin: center bottom;
-    animation: fadeInUp 0.8s ease-out, bounce 1.5s ease-out 0.8s;
-  }
+
+
   
-  form {
-    display: flex;
-    flex-direction: column;
-  }
+
   
-  .form-label {
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .form-control {
-    padding: 12px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    transition: border-color 0.3s ease;
-  }
+
   
   .form-control:focus {
     outline: none;
@@ -103,15 +80,5 @@
   
   /* Custom scrollbar */
   /* You can adjust the scrollbar styles based on your preferences */
-  ::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #3498db;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background-color: #f1f1f1;
-  }
+
   

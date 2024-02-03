@@ -2,26 +2,34 @@ import React, { useState } from 'react';
 import { Navbar, Container, Nav, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
 import MainPage from './main page';
 import WeatherInfo from './weather';
-
-
-// Replace with your actual logo path
-
+import Tourism from './tourism';
+import Places from './Culture';
+import Historic from './historic';
+import Add from './Add';
+import ContactForm from './Book';
+import axios from 'axios';
+import './Navbar.css'
 function BasicExample() {
   const [activeTab, setActiveTab] = useState('home');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [name, setName] = useState('');
+  const [data, setData] = useState(null);
+  
+
+  const handleSearch = () => {
+    axios
+      .get(`http://localhost:3001/tourism/${name}`)
+      .then((response) => {
+        setData(response.data);
+       
+      })
+      .catch((error) => {
+        console.error('Error fetching data: ', error);
+        setData(null);
+      });
+  };
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
-  };
-
-  const handleSearchChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
-
-  const handleSearchSubmit = (event) => {
-    event.preventDefault();
-    // Add your search logic here using the searchTerm state
-    console.log('Search Term:', searchTerm);
   };
 
   return (
@@ -30,7 +38,7 @@ function BasicExample() {
         <Container>
           <Navbar.Brand href="#home">
             <img src="" alt="" height="30" />
-            Tunisian Press
+            Sicca Veneria
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -41,44 +49,34 @@ function BasicExample() {
               <Nav.Link href="#weather" onClick={() => handleTabClick('Weather')}>
                 Weather
               </Nav.Link>
-              <Nav.Link href="#sports" onClick={() => handleTabClick('sports')}>
-                Sports
+              <Nav.Link href="#Tourism" onClick={() => handleTabClick('Tourism')}>
+                Tourism
               </Nav.Link>
-              <Nav.Link href="#link" onClick={() => handleTabClick('politics')}>
-                Politics
+              <Nav.Link href="#Culture" onClick={() => handleTabClick('Culture')}>
+                Culture
               </Nav.Link>
-              <Nav.Link href="#music" onClick={() => handleTabClick('music')}>
-                Music
+              <Nav.Link href="#Historic" onClick={() => handleTabClick('Historic')}>
+                Historic
               </Nav.Link>
-              <Nav.Link href="#radio" onClick={() => handleTabClick('radio')}>
-                Radio
-              </Nav.Link>
-              <Nav.Link href="#tv" onClick={() => handleTabClick('tv')}>
-                TV
-              </Nav.Link>
-
               <NavDropdown title="Details" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('contact')}>
-                  Contact us
+                <NavDropdown.Item href="#ContactForm" onClick={() => handleTabClick('Book')}>
+                  Book
                 </NavDropdown.Item>
                 <NavDropdown.Item href="#Add" onClick={() => handleTabClick('Add')}>
                   Add
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#Aboutus" onClick={() => handleTabClick('Aboutus')}>
-                  About Us
-                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
-            <Form className="d-flex" onSubmit={handleSearchSubmit}>
+            <Form className="d-flex">
               <FormControl
                 type="search"
                 placeholder="Search"
                 className="mr-2"
                 aria-label="Search"
-                value={searchTerm}
-                onChange={handleSearchChange}
+                value={name}
+                onChange={(e) => setName(e.target.value)}
               />
-              <Button variant="outline-success" type="submit">
+              <Button variant="outline-success" onClick={handleSearch}>
                 Search
               </Button>
             </Form>
@@ -87,9 +85,24 @@ function BasicExample() {
       </Navbar>
       <hr />
 
+     
+      {/* {data && (
+        <div>
+          <img src={data[0].image_url}  />
+          <div>Name: {data[0].name}</div>
+       
+        </div>
+      )} */}
+
+
+      {/* Render components based on activeTab */}
       {activeTab === 'home' && <MainPage />}
       {activeTab === 'Weather' && <WeatherInfo />}
-    
+      {activeTab === 'Tourism' && <Tourism />}
+      {activeTab === 'Culture' && <Places />}
+      {activeTab === 'Historic' && <Historic />}
+      {activeTab === 'Add' && <Add />}
+      {activeTab === 'Book' && <ContactForm />}
     </div>
   );
 }
