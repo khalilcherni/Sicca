@@ -5,6 +5,65 @@ body {
     padding: 0;
   }
   
+
+
+.h2{
+  font-size:px;
+}
+
+
+
+
+  .cta {
+    --glow-color: rgb(217, 176, 255);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(231, 206, 255);
+    --btn-color: rgb(100, 61, 136);
+    border: .17em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+   }
+   
+   .cta::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .7;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   }
+   
+   .cta:hover {
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+   }
+   
+   .cta:active {
+    box-shadow: 0 0 0.3em .25em var(--glow-color),
+           0 0 2.5em 2em var(--glow-spread-color),
+           inset 0 0 .5em .25em var(--glow-color);
+   }
+  
+
   /* Container for the video background */
   .background-container {
     position: relative;
@@ -102,12 +161,15 @@ body {
     margin-top: 50px;
     text-align: center;
     color: #ddd;
+    
+
   }
   
   .category-links {
     display: flex;
     justify-content: center;
-    margin-top: 30px;
+    margin-top: 50px;
+    gap :10px
   }
   
   .category-link {
@@ -295,7 +357,7 @@ body {
     width: 30px;
   }
   
-  .button-80 {
+  ..cta-80 {
     background: #fff;
     backface-visibility: hidden;
     border-radius: .375rem;
@@ -321,19 +383,19 @@ body {
     touch-action: manipulation;
   }
   
-  .button-80:not(:disabled):hover {
+  ..cta-80:not(:disabled):hover {
     transform: scale(1.05);
   }
   
-  .button-80:not(:disabled):hover:active {
+  ..cta-80:not(:disabled):hover:active {
     transform: scale(1.05) translateY(.125rem);
   }
   
-  .button-80:focus {
+  ..cta-80:focus {
     outline: 0 solid transparent;
   }
   
-  .button-80:focus:before {
+  ..cta-80:focus:before {
     content: "";
     left: calc(-1*.375rem);
     pointer-events: none;
@@ -343,15 +405,15 @@ body {
     user-select: none;
   }
   
-  .button-80:focus:not(:focus-visible) {
+  ..cta-80:focus:not(:focus-visible) {
     outline: 0 solid transparent;
   }
   
-  .button-80:focus:not(:focus-visible):before {
+  ..cta-80:focus:not(:focus-visible):before {
     border-width: 0;
   }
   
-  .button-80:not(:disabled):active {
+  ..cta-80:not(:disabled):active {
     transform: translateY(.125rem);
   }
   .b{
