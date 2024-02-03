@@ -32,13 +32,13 @@
   
   /* Navbar Search Button */
   .btn-outline-success {
-    border-color: #28a745 !important; /* Search button border color */
-    color: #28a745 !important; /* Text color */
+    border-color: #979797 !important; /* Search button border color */
+    color: #9a9a9a !important; /* Text color */
     transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition effect */
   }
   
   .btn-outline-success:hover {
-    background-color: #28a745 !important; /* Background color on hover */
+    background-color: #a2a2a2 !important; /* Background color on hover */
     color: #fff !important; /* Text color on hover */
   }
   
