@@ -27,7 +27,7 @@ function Tourism() {
     <div className="background-container">
       <video id="background-video" autoPlay loop muted>
         <source src={video} type="video/mp4" />
-        Your browser does not support the video tag.
+       
       </video>
       <div>
         <div className="card-container">
