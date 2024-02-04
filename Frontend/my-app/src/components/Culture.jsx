@@ -3,10 +3,11 @@ import axios from 'axios';
 import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Button from 'react-bootstrap/Button'; // Add this import
-
+import Details from "./Details"
 import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 import './Culture.css';
 import StarRating from './StarRating';
+
 
 function Places() {
   const [data, setData] = useState([]);
@@ -18,6 +19,17 @@ function Places() {
   const[updatelocation,setloc]=useState("")
   const[updatecontac,setcona]=useState("")
 
+
+  const [menuView, setMenuView] = useState(false);
+  const [view, setView] = useState('Culture');
+  const [product,setproduct]=useState(null)
+ 
+
+  const switchView = (option, place = null) => {
+    setView(option);
+    setproduct(place);
+  };
+  
   useEffect(() => {
     axios.get('http://localhost:3001/cultural/getAll')
       .then(res => setData(res.data))
@@ -36,14 +48,16 @@ function Places() {
   const handleUpdateClick = (placeId) => {
     setEditingPlaceId(placeId);
     const placeToUpdate = data.find(e => e.place_id === placeId);
- 
+
     setUpdatedDescription(placeToUpdate.description);
     setUpdatedImageUrl(placeToUpdate.image_url);
-    setcategory(placeToUpdate.cultural_category)
-  setcona(placeToUpdate.contact_info)
-  setloc(setloc.location)
-  };
+    setcategory(placeToUpdate.cultural_category);
+    setcona(placeToUpdate.contact_info);
+    setloc(placeToUpdate.location);
 
+    switchView('Details', placeToUpdate);  // Switch the view to 'Details' and pass the place
+  };
+  
   const handleUpdateSubmit = (placeId) => {
     axios
       .put(`http://localhost:3001/cultural/update/${placeId}`, {
@@ -71,6 +85,7 @@ function Places() {
         );
         setData(updatedData);
         setEditingPlaceId(null);
+        setproduct(null)
       })
       .catch((err) => console.error('Error updating place:', err));
   };
@@ -161,6 +176,7 @@ function Places() {
             </div>
           ))}
         </div>
+        {product && <Details switchView={switchView} place={product} />}
       </div>
     </div>
   );
