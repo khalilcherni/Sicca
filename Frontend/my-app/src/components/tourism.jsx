@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 import './tourism.css';
 import StarRating from './StarRating';
+import Button from 'react-bootstrap/Button'; // Add this import
 
 function Tourism() {
   const [data, setData] = useState([]);
@@ -51,7 +52,7 @@ const[updatehours,sethours]=useState("")
 
   const handleUpdateSubmit = (placeId) => {
     axios
-      .put(`http://localhost:3001/historic/update/${placeId}`, {
+      .put(`http://localhost:3001/tourism/update/${placeId}`, {
        
         image_url: updatedImageUrl,
         description: updatedDescription,
@@ -148,12 +149,7 @@ const[updatehours,sethours]=useState("")
                     onChange={(e) => settourism_category(e.target.value)}
                   />
                     <label htmlFor="newDescription">New Description:</label>
-                  <input
-                    type="text"
-                    id="newDescription"
-                    value={updateyear}
-                    onChange={(e) => setyear(e.target.value)}
-                  />
+  
                  
                   
                          <input
