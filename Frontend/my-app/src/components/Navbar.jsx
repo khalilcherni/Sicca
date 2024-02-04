@@ -92,7 +92,7 @@ function BasicExample() {
 
       {/* Render the received data only if searchClicked is true */}
       {searchClicked && data && (
-        <div>
+        <div className='modify'>
           <img src={data.image_url} alt="Place" />
           <div>Name: {data.name}</div>
           <div>Description: {data.description}</div>
