@@ -128,7 +128,7 @@ const ContactForm = () => {
         onChange={(e) => setMessage(e.target.value)}
       ></textarea>
 
-      <button className="button-89" onClick={sendMail}>
+      <button id="button-89" onClick={sendMail}>
         Send Message
       </button>
     </div>

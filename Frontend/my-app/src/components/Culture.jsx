@@ -146,13 +146,13 @@ function Places() {
           
               {editingPlaceId === e.place_id ? (
                 <div>
-                  <Button variant="success" className='button-55' onClick={() => handleUpdateSubmit(e.place_id)}>Update</Button>
-                  <Button variant="danger"  className='button-55' onClick={handleCancelUpdate}>Cancel</Button>
+                  <Button variant="success" id='button-89' onClick={() => handleUpdateSubmit(e.place_id)}>Update</Button>
+                  <Button variant="danger"  id='button-89' onClick={handleCancelUpdate}>Cancel</Button>
                 </div>
               ) : (
                 <div>
-                  <Button variant="primary"  className='button-55' onClick={() => handleDeleteClick(e.place_id)}>Delete</Button>
-                  <Button variant="secondary"  className='button-55' onClick={() => handleUpdateClick(e.place_id)}>Update</Button>
+                  <Button variant="primary"  id='button-89' onClick={() => handleDeleteClick(e.place_id)}>Delete</Button>
+                  <Button variant="secondary"  id='button-89' onClick={() => handleUpdateClick(e.place_id)}>Update</Button>
                 </div>
                     )}
                   </div>
