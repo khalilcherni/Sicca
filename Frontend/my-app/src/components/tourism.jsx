@@ -137,15 +137,15 @@ const[updatehours,sethours]=useState("")
                   <input
                     type="text"
                     id="newDescription"
-                    value={updatear}
-                    onChange={(e) => setar(e.target.value)}
+                    value={updateactivities}
+                    onChange={(e) => setactivities(e.target.value)}
                   />
                     <label htmlFor="newDescription">New Description:</label>
                   <input
                     type="text"
                     id="newDescription"
-                    value={updatecontac}
-                    onChange={(e) => setcona(e.target.value)}
+                    value={updatetourism_category}
+                    onChange={(e) => settourism_category(e.target.value)}
                   />
                     <label htmlFor="newDescription">New Description:</label>
                   <input
@@ -155,12 +155,7 @@ const[updatehours,sethours]=useState("")
                     onChange={(e) => setyear(e.target.value)}
                   />
                  
-                      <input
-                    type="text"
-                    id="newDescription"
-                    value={updatehist}
-                    onChange={(e) => sethist(e.target.value)}
-                  />
+                  
                          <input
                     type="text"
                     id="newDescription"
