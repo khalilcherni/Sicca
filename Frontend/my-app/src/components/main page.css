@@ -357,7 +357,7 @@ body {
     width: 30px;
   }
   
-  ..cta-80 {
+  .cta-80 {
     background: #fff;
     backface-visibility: hidden;
     border-radius: .375rem;
@@ -383,19 +383,19 @@ body {
     touch-action: manipulation;
   }
   
-  ..cta-80:not(:disabled):hover {
+  .cta-80:not(:disabled):hover {
     transform: scale(1.05);
   }
   
-  ..cta-80:not(:disabled):hover:active {
+  .cta-80:not(:disabled):hover:active {
     transform: scale(1.05) translateY(.125rem);
   }
   
-  ..cta-80:focus {
+  .cta-80:focus {
     outline: 0 solid transparent;
   }
   
-  ..cta-80:focus:before {
+  .cta-80:focus:before {
     content: "";
     left: calc(-1*.375rem);
     pointer-events: none;
@@ -405,15 +405,15 @@ body {
     user-select: none;
   }
   
-  ..cta-80:focus:not(:focus-visible) {
+  .cta-80:focus:not(:focus-visible) {
     outline: 0 solid transparent;
   }
   
-  ..cta-80:focus:not(:focus-visible):before {
+  .cta-80:focus:not(:focus-visible):before {
     border-width: 0;
   }
   
-  ..cta-80:not(:disabled):active {
+  .cta-80:not(:disabled):active {
     transform: translateY(.125rem);
   }
   .b{
