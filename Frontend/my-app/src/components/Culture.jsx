@@ -99,7 +99,7 @@ function Places() {
         <source src={video} type="video/mp4" />
       </video>
       <div>
-        <div className="card-container">
+         <div className="card-container culture-card-container">
           {data.map(e => (
             <div key={e.place_id} className="card-wrapper">
               <Card style={{ width: '18rem' }} className="custom-card">
