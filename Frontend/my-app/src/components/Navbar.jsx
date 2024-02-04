@@ -8,29 +8,34 @@ import Historic from './historic';
 import Add from './Add';
 import ContactForm from './Book';
 import axios from 'axios';
-import './Navbar.css'
+import './Navbar.css';
+
 function BasicExample() {
   const [activeTab, setActiveTab] = useState('home');
   const [name, setName] = useState('');
   const [data, setData] = useState(null);
-  
+  const [searchClicked, setSearchClicked] = useState(false); // New state variable
 
   const handleSearch = () => {
     axios
       .get(`http://localhost:3001/tourism/${name}`)
       .then((response) => {
+        console.log('API Response:', response.data);
         setData(response.data);
-       
+        setSearchClicked(true); // Set searchClicked to true when data is received
       })
       .catch((error) => {
         console.error('Error fetching data: ', error);
         setData(null);
+        setSearchClicked(true); // Set searchClicked to true even if there's an error
       });
   };
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
+
+  console.log('Current Data State:', data);
 
   return (
     <div>
@@ -85,15 +90,16 @@ function BasicExample() {
       </Navbar>
       <hr />
 
-     
-      {/* {data && (
+      {/* Render the received data only if searchClicked is true */}
+      {searchClicked && data && (
         <div>
-          <img src={data[0].image_url}  />
-          <div>Name: {data[0].name}</div>
-       
+          <img src={data.image_url} alt="Place" />
+          <div>Name: {data.name}</div>
+          <div>Description: {data.description}</div>
+          <div>Contact Info: {data.contact_info}</div>
+          {/* Include other details you want to display */}
         </div>
-      )} */}
-
+      )}
 
       {/* Render components based on activeTab */}
       {activeTab === 'home' && <MainPage />}
