@@ -27,7 +27,7 @@
   .form-control {
     border: 2px solid rgba(255, 255, 255, 0.5) !important; /* Search input border with transparency */
     color: #fff !important; /* Text color */
-    background-color: rgba(26, 32, 38, 0.7) !important; /* Background color with transparency */
+    background-color: rgb(255, 255, 255) !important; /* Background color with transparency */
   }
   
   /* Navbar Search Button */
