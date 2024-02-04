@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 import './historic.css';
+import Button from 'react-bootstrap/Button'; // Add this import
 import StarRating from './StarRating';
 
 function Historic() {
@@ -12,14 +13,14 @@ function Historic() {
  
   const [updatedDescription, setUpdatedDescription] = useState('');
   const [updatedImageUrl, setUpdatedImageUrl] = useState('');
-  const [updatecategory,setcategory]=useState("")
+
   const[updatelocation,setloc]=useState("")
   const[updatecontac,setcona]=useState("")
-const[updateyear,setyear]=(0)
+const[updateyear,setyear]=useState("")
 const[updatehist,sethist]=useState("")
 const[updatear,setar]=useState("")
-const[updateent,setent]=useState(0)
-const[updatehours,sethours]=useState(0)
+const[updateent,setent]=useState("")
+const[updatehours,sethours]=useState("")
 
   useEffect(() => {
     axios.get('http://localhost:3001/historic/getAll')
@@ -44,9 +45,13 @@ const[updatehours,sethours]=useState(0)
  
     setUpdatedDescription(placeToUpdate.description);
     setUpdatedImageUrl(placeToUpdate.image_url);
-    setcategory(placeToUpdate.cultural_category)
-  setcona(placeToUpdate.cultural_category)
-  setloc(setloc.location)
+    setcona(placeToUpdate.contact_info)
+  setloc(placeToUpdate.location)
+  setyear(placeToUpdate.year_established)
+  sethist(placeToUpdate.historical_significance)
+  setar(placeToUpdate.architectural_style)
+  setent(placeToUpdate.entry_fee)
+  sethours(placeToUpdate.opening_hours)
   };
 
   const handleUpdateSubmit = (placeId) => {
@@ -55,10 +60,13 @@ const[updatehours,sethours]=useState(0)
        
         image_url: updatedImageUrl,
         description: updatedDescription,
-        cultural_category: updatecategory,
         location:updatelocation,
-        contact_info:updatecontac
-
+        contact_info:updatecontac,
+        year_established:updateyear,
+        historical_significance:updatehist,
+        architectural_style:updatear,
+        entry_fee:updateent,
+        opening_hours:updatehours
       })
       .then((response) => {
         console.log(response.data);
@@ -68,9 +76,13 @@ const[updatehours,sethours]=useState(0)
                 ...item,
                 image_url: updatedImageUrl,
                 description: updatedDescription,
-                cultural_category: updatecategory,
                 location:updatelocation,
-                contact_info:updatecontac
+                contact_info:updatecontac,
+                year_established:updateyear,
+                historical_significance:updatehist,
+                architectural_style:updatear,
+                entry_fee:updateent,
+                opening_hours:updatehours
               }
             : item
         );
@@ -132,8 +144,8 @@ const[updatehours,sethours]=useState(0)
                   <input
                     type="text"
                     id="newDescription"
-                    value={updatecategory}
-                    onChange={(e) => setcategory(e.target.value)}
+                    value={updatear}
+                    onChange={(e) => setar(e.target.value)}
                   />
                     <label htmlFor="newDescription">New Description:</label>
                   <input
@@ -142,7 +154,32 @@ const[updatehours,sethours]=useState(0)
                     value={updatecontac}
                     onChange={(e) => setcona(e.target.value)}
                   />
-               
+                    <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updateyear}
+                    onChange={(e) => setyear(e.target.value)}
+                  />
+                 
+                      <input
+                    type="text"
+                    id="newDescription"
+                    value={updatehist}
+                    onChange={(e) => sethist(e.target.value)}
+                  />
+                         <input
+                    type="text"
+                    id="newDescription"
+                    value={updateent}
+                    onChange={(e) => setent(e.target.value)}
+                  />
+                          <input
+                    type="text"
+                    id="newDescription"
+                    value={updatehours}
+                    onChange={(e) => sethours(e.target.value)}
+                  />
                 </div>
                 
               ) : (
