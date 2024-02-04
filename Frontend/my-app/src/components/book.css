@@ -1,9 +1,12 @@
-/* Basic styling for the form container */
+body {
+  background-color: beige;
+}
+
 .hh {
   position: relative;
   max-width: 500px;
   margin: 0 auto;
-  background-color: #f5f5f5;
+  background-color: beige;
   padding: 40px;
   border-radius: 15px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -14,7 +17,6 @@
   transition: transform 0.3s ease-in-out;
 }
 
-/* Styling for the alert */
 .alert {
   background-color: #ff3333;
   padding: 20px;
@@ -23,18 +25,16 @@
   margin-top: 20px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   color: #fff;
-  display: none; /* Hide the alert by default */
+  display: none;
   opacity: 0;
   transform: translateY(-20px);
   animation: showAlert 0.5s ease-out forwards;
 }
 
-/* Animation for the form container on hover */
 .hh:hover {
   transform: scale(1.05);
 }
 
-/* Input and textarea styling */
 .form-label {
   display: block;
   margin-bottom: 15px;
@@ -59,30 +59,25 @@
   border-color: #45a049;
 }
 
-/* Button styling with animation */
 #button-89 {
-  --b: 3px;   /* border thickness */
-  --s: .45em; /* size of the corner */
+  --b: 3px;
+  --s: .45em;
   --color: #373B44;
-  
   padding: calc(.5em + var(--s)) calc(.9em + var(--s));
   color: var(--color);
   --_p: var(--s);
   background:
     conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
-    var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    var(--_p) var(--p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
   transition: .3s linear, color 0s, background-color 0s;
   outline: var(--b) solid #0000;
   outline-offset: .6em;
   font-size: 16px;
-  
   border: 0;
-  
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-
-  animation: fadeInUp 0.5s ease, pulsate 2s infinite ease-in-out; /* Apply animations */
+  animation: fadeInUp 0.5s ease, pulsate 2s infinite ease-in-out;
 }
 
 #button-89:hover,
@@ -90,13 +85,13 @@
   --_p: 0px;
   outline-color: var(--color);
   outline-offset: .05em;
-  animation: none; /* Disable animations on hover or focus */
+  animation: none;
 }
 
 #button-89:active {
   background: var(--color);
   color: #fff;
-  animation: none; /* Disable animations on click */
+  animation: none;
 }
 
 @keyframes fadeInUp {
@@ -118,4 +113,3 @@
     transform: scale(1.1);
   }
 }
-
