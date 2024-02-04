@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Add.css'
-import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
+// import video from "../video/El Kef Tunisia تونس الكاف (1).mp4";
 function Add () {
   const [name, setname] = useState('');
   const [contact_info, setcontact_info] = useState('');
@@ -44,10 +44,10 @@ setactivities("")
   return (
     
     <div className="container mt-5">
-      <video id="background-video" autoPlay loop muted>
+      {/* <video id="background-video" autoPlay loop muted>
         <source src={video} type="video/mp4" />
         Your browser does not support the video tag.
-      </video>
+      </video> */}
       <h2 className="mb-4">Add New Place</h2>
       <form>
         <div className="mb-3">
@@ -123,7 +123,7 @@ setactivities("")
 
 
 
-        <button className='button-89 ' type="button"  onClick={handle}>
+        <button id="button-89"type="button"  onClick={handle}>
           ADD
         </button>
       </form>
