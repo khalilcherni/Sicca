@@ -9,9 +9,14 @@ import StarRating from './StarRating';
 function Tourism() {
   const [data, setData] = useState([]);
   const [editingPlaceId, setEditingPlaceId] = useState(null);
-  const [updatedName, setUpdatedName] = useState('');
   const [updatedDescription, setUpdatedDescription] = useState('');
   const [updatedImageUrl, setUpdatedImageUrl] = useState('');
+  const[updatecontac,setcona]=useState("")
+const[updatetourism_category,settourism_category]=useState("")
+const[updateactivities,setactivities]=useState("")
+const[updatelocation,setloc]=useState("")
+const[updateent,setent]=useState("")
+const[updatehours,sethours]=useState("")
 
   useEffect(() => {
     axios.get('http://localhost:3001/tourism/getAll')
@@ -19,13 +24,7 @@ function Tourism() {
       .catch(err => console.error(err));
   }, []);
 
-  const handleUpdateClick = (placeId) => {
-    setEditingPlaceId(placeId);
-    const placeToUpdate = data.find(e => e.place_id === placeId);
-    setUpdatedName(placeToUpdate.name);
-    setUpdatedDescription(placeToUpdate.description);
-    setUpdatedImageUrl(placeToUpdate.image_url);
-  };
+
 
   const handleDeleteClick = async (placeId) => {
     try {
@@ -36,25 +35,60 @@ function Tourism() {
     }
   };
 
-  const handleUpdateSubmit = async () => {
-    try {
-      await axios.put(`http://localhost:3001/tourism/update/${editingPlaceId}`, {
-        name: updatedName,
-        description: updatedDescription,
-        image_url: updatedImageUrl,
-      });
-
-      // Fetch updated data after successful update
-      const updatedData = await axios.get('http://localhost:3001/tourism/getAll');
-      setData(updatedData.data);
-      setEditingPlaceId(null);
-    } catch (error) {
-      console.error('Error updating place:', error);
-    }
+  const handleUpdateClick = (placeId) => {
+    setEditingPlaceId(placeId);
+    const placeToUpdate = data.find(e => e.place_id === placeId);
+ 
+    setUpdatedDescription(placeToUpdate.description);
+    setUpdatedImageUrl(placeToUpdate.image_url);
+    setcona(placeToUpdate.contact_info)
+  setloc(placeToUpdate.location)
+  settourism_category(placeToUpdate.tourism_category)
+  setactivities(placeToUpdate.activities)
+  setent(placeToUpdate.entry_fee)
+  sethours(placeToUpdate.opening_hours)
   };
 
+  const handleUpdateSubmit = (placeId) => {
+    axios
+      .put(`http://localhost:3001/historic/update/${placeId}`, {
+       
+        image_url: updatedImageUrl,
+        description: updatedDescription,
+        location:updatelocation,
+        contact_info:updatecontac,
+        tourism_category:updatetourism_category,
+        activities:updateactivities,
+        entry_fee:updateent,
+        opening_hours:updatehours
+      })
+      .then((response) => {
+        console.log(response.data);
+        const updatedData = data.map((item) =>
+          item.place_id === placeId
+            ? {
+                ...item,
+                image_url: updatedImageUrl,
+                description: updatedDescription,
+                location:updatelocation,
+                contact_info:updatecontac,
+                tourism_category:updatetourism_category,
+                activities:updateactivities,
+                entry_fee:updateent,
+                opening_hours:updatehours
+              }
+            : item
+        );
+        setData(updatedData);
+        setEditingPlaceId(null);
+      })
+      .catch((err) => console.error('Error updating place:', err));
+  };
+  
+  const handleCancelUpdate = () => {
+    setEditingPlaceId(null);
+  }
   const handleRatingClick = (clickedRating, placeId) => {
-    // Update the rating in your data based on placeId
     setData(prevData => prevData.map(e => (e.place_id === placeId ? { ...e, rating: clickedRating } : e)));
   };
 
@@ -74,18 +108,87 @@ function Tourism() {
                   <Card.Text>{e.description}</Card.Text>
                   <StarRating rating={e.rating} onRatingClick={(clickedRating) => handleRatingClick(clickedRating, e.place_id)} />
                   <div>
-                    {editingPlaceId === e.place_id ? (
-                      <div>
-                        <input type="text" value={updatedName} onChange={(e) => setUpdatedName(e.target.value)} />
-                        <input type="text" value={updatedDescription} onChange={(e) => setUpdatedDescription(e.target.value)} />
-                        <input type="text" value={updatedImageUrl} onChange={(e) => setUpdatedImageUrl(e.target.value)} />
-                        <button onClick={handleUpdateSubmit}>Submit Update</button>
-                      </div>
-                    ) : (
-                      <div>
-                        <button onClick={() => handleUpdateClick(e.place_id)}>Update</button>
-                        <button onClick={() => handleDeleteClick(e.place_id)}>Delete</button>
-                      </div>
+                  {editingPlaceId === e.place_id ? (
+                <div>
+                 
+                  <label htmlFor="newImage">New Image URL:</label>
+                  <input
+                    type="text"
+                    id="newImage"
+                    value={updatedDescription}
+                    onChange={(e) => setUpdatedDescription(e.target.value)}
+                  />
+                  <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updatedImageUrl}
+                    onChange={(e) => setUpdatedImageUrl(e.target.value)}
+                  />
+                    <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updatelocation}
+                    onChange={(e) => setloc(e.target.value)}
+                    
+                  />
+                    <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updatear}
+                    onChange={(e) => setar(e.target.value)}
+                  />
+                    <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updatecontac}
+                    onChange={(e) => setcona(e.target.value)}
+                  />
+                    <label htmlFor="newDescription">New Description:</label>
+                  <input
+                    type="text"
+                    id="newDescription"
+                    value={updateyear}
+                    onChange={(e) => setyear(e.target.value)}
+                  />
+                 
+                      <input
+                    type="text"
+                    id="newDescription"
+                    value={updatehist}
+                    onChange={(e) => sethist(e.target.value)}
+                  />
+                         <input
+                    type="text"
+                    id="newDescription"
+                    value={updateent}
+                    onChange={(e) => setent(e.target.value)}
+                  />
+                          <input
+                    type="text"
+                    id="newDescription"
+                    value={updatehours}
+                    onChange={(e) => sethours(e.target.value)}
+                  />
+                </div>
+                
+              ) : (
+                <Card.Text>{e.description}</Card.Text>
+              )}
+          
+              {editingPlaceId === e.place_id ? (
+                <div>
+                  <Button variant="success" className='button-55' onClick={() => handleUpdateSubmit(e.place_id)}>Update</Button>
+                  <Button variant="danger"  className='button-55' onClick={handleCancelUpdate}>Cancel</Button>
+                </div>
+              ) : (
+                <div>
+                  <Button variant="primary"  className='button-55' onClick={() => handleDeleteClick(e.place_id)}>Delete</Button>
+                  <Button variant="secondary"  className='button-55' onClick={() => handleUpdateClick(e.place_id)}>Update</Button>
+                </div>
                     )}
                   </div>
                 </Card.Body>
@@ -97,5 +200,7 @@ function Tourism() {
     </div>
   );
 }
+
+
 
 export default Tourism;
