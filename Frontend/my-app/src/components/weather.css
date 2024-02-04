@@ -1,0 +1,148 @@
+/* WeatherInfo.css */
+
+/* Weather Container */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 50px;
+  color: rgb(118, 38, 38);
+  animation: fadeInDown 1s ease-in-out;
+}
+
+/* Input Styles */
+input {
+  padding: 15px;
+  margin-bottom: 20px;
+  width: 90%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: background-color 0.3s;
+  font-size: 16px;
+  animation: slideIn 1s ease-in-out;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+/* Button Styles */
+button {
+  padding: 15px 25px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  font-size: 18px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Weather Information */
+.weather-info {
+  margin-top: 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+h3 {
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: #090909;
+}
+
+/* Additional Weather Details */
+.c {
+  margin: 15px 0;
+  font-size: 16px;
+  color: #1f1e1d;
+  animation: fadeInLeft 1s ease-in-out;
+}
+
+/* Uncomment this block if you want to include an image */
+/* img {
+  margin-top: 50px;
+  border-radius: 15px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  animation: rotate 3s linear infinite;
+} */
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Example Rotation Animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
