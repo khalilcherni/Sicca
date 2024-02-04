@@ -123,3 +123,25 @@
     transform: scale(1.1);
   }
 }
+
+.cultural .custom-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 8px;
+  opacity: 1;
+  transform: translateY(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.cultural .custom-card:hover {
+  transform: translateY(-10px);
+}
+
+.cultural .card-wrapper {
+  flex: 1;
+  min-width: 18rem;
+  max-width: 18rem;
+  overflow: hidden;
+}
